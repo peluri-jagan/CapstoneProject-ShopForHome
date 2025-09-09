@@ -1,0 +1,38 @@
+<!-- Frontend/src/app/components/admin/sales-report/sales-report.component.html -->
+<div class="container mt-4">
+  <h2>Sales Report</h2>
+  <form [formGroup]="reportForm" (ngSubmit)="generateReport()">
+    <div class="mb-3">
+      <label>From Date</label>
+      <input type="date" formControlName="fromDate" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label>To Date</label>
+      <input type="date" formControlName="toDate" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="reportForm.invalid">Generate Report</button>
+  </form>
+  <div *ngIf="error" class="alert alert-danger mt-3">{{ error }}</div>
+  <div *ngIf="salesReport">
+    <p>Total Orders: {{ salesReport.totalOrders }}</p>
+    <p>Total Revenue: {{ salesReport.totalRevenue | currency }}</p>
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of salesReport.orders">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.username }}</td>
+          <td>{{ order.totalAmount | currency }}</td>
+          <td>{{ order.orderDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

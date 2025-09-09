@@ -1,0 +1,12 @@
+<!-- Frontend/src/app/components/wishlist/wishlist.component.html -->
+<div class="container mt-4">
+  <h2>Your Wishlist</h2>
+  <div *ngIf="isLoading">Loading wishlist...</div>
+  <ul *ngIf="!isLoading && wishlist.length" class="list-group">
+    <li *ngFor="let item of wishlist" class="list-group-item d-flex justify-content-between align-items-center">
+      Product ID: {{ item.productId }}
+      <button (click)="removeFromWishlist(item.productId)" class="btn btn-sm btn-danger">Remove</button>
+    </li>
+  </ul>
+  <div *ngIf="!wishlist.length && !isLoading">Your wishlist is empty.</div>
+</div>

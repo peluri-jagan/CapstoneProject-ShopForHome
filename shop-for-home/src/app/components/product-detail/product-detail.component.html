@@ -1,0 +1,16 @@
+<div class="container mt-4" *ngIf="product; else loadingOrError">
+  <h2>{{ product?.name }}</h2>
+  <img *ngIf="product?.imageUrl" [src]="product?.imageUrl" alt="{{ product?.name }}" class="img-fluid" />
+
+  <p>{{ product?.description }}</p>
+  <p><strong>Price:</strong> {{ product?.price | currency }}</p>
+  <p><strong>Stock:</strong> {{ product?.stockQuantity }}</p>
+  <p><strong>Rating:</strong> {{ product?.rating }}</p>
+
+  <button class="btn btn-primary">Add to Cart</button>
+</div>
+
+<ng-template #loadingOrError>
+  <div *ngIf="isLoading">Loading...</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+</ng-template>

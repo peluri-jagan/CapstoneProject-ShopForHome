@@ -1,0 +1,144 @@
+/* Global styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* dark background */
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  background-color: #1c1c1c; /* dark header */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(255, 20, 147, 0.2);
+}
+
+/* Logo */
+nav .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff1493; /* pink logo */
+}
+
+/* Links wrapper */
+.nav-links {
+  display: flex;
+  gap: 1rem; /* spacing between links */
+}
+
+/* Links */
+.nav-links a {
+  color: #ff1493; 
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ff69b4;
+  color: #121212;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #100101;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer-about h3,
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 10px;
+  color: #ff1493;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-contact .socials a {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #1c1c1c;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 100%;
+  }
+
+  .footer-contact .socials a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+}
+
+
+/* Responsive navigation for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+
+    a {
+      margin: 0.25rem 0;
+    }
+
+    &::before {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

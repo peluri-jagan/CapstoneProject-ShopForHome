@@ -1,0 +1,123 @@
+/* Page Container */
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f1;
+  background-color: #0f1426;
+  min-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(59, 76, 202, 0.2);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ff2d95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Form Labels */
+label {
+  font-weight: 600;
+  color: #3b4cca;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Date Inputs */
+input[type="date"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #3b4cca;
+  border-radius: 8px;
+  background-color: #1a1f36;
+  color: #f0f0f1;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #ff2d95;
+  box-shadow: 0 0 8px rgba(255, 45, 149, 0.5);
+}
+
+/* Generate Report Button */
+button.btn-primary {
+  background-color: #3b4cca;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #ff2d95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 45, 149, 0.3);
+}
+
+/* Error Alert */
+.alert-danger {
+  background-color: #2a1a2f;
+  border: 1px solid #ff2d95;
+  color: #ff2d95;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/* Report Summary */
+p {
+  font-size: 1.1rem;
+  color: #d1d6f0;
+}
+
+p strong {
+  color: #ff2d95;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1f36;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(59, 76, 202, 0.2);
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: center;
+  color: #d1d6f0;
+  border-bottom: 1px solid #3b4cca;
+}
+
+.table th {
+  background-color: #3b4cca;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background-color: rgba(255, 45, 149, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

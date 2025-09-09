@@ -1,0 +1,85 @@
+/* Page Container */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f1;
+  background-color: #0f1426 !important;
+  min-height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(59, 76, 202, 0.2);
+  text-align: center;
+}
+
+/* Page Title */
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ff2d95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* File Input */
+input[type="file"] {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem;
+  border: 2px dashed #3b4cca;
+  border-radius: 8px;
+  background-color: #1a1f36;
+  color: #d1d6f0;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #ff2d95;
+  background-color: rgba(255, 45, 149, 0.05);
+  cursor: pointer;
+}
+
+/* Upload Button */
+button.btn-primary {
+  background-color: #3b4cca;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #ff2d95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 45, 149, 0.3);
+}
+
+/* Progress Bar */
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #1a1f36;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  background-color: #ff2d95;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  transition: width 0.4s ease;
+}
+
+/* Info Message */
+.alert-info {
+  background-color: #1a1f36;
+  border: 1px solid #3b4cca;
+  color: #d1d6f0;
+  font-weight: 500;
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 0.8rem;
+}

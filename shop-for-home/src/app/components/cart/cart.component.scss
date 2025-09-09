@@ -1,0 +1,162 @@
+/* Cart Page Container */
+/* Cart Page Container */
+.container {
+  width: 100%;
+  max-width: 12000px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a83;
+  background-color: #0f1426 !important; /* force dark background */
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+
+/* Cart Title */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ff2d95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Cart Table */
+/* Cart Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1f36; /* dark purple background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(59, 76, 202, 0.2);
+}
+
+/* Table header */
+.table th {
+  background-color: #3b4cca; /* deep purple-blue header */
+  color: #fff; /* white text */
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #ff2d95; /* pink border line */
+}
+
+/* Table body cells */
+.table td {
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff; /* white text for dark theme */
+  border-bottom: 1px solid #9ba2d0; /* subtle row border */
+  background-color: #1a1f36; /* match container theme */
+}
+
+/* Table row hover effect */
+.table tr:hover {
+  background-color: rgba(255, 45, 149, 0.1); /* soft pink hover */
+}
+
+/* Product image inside table */
+.table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #3b4cca;
+}
+
+.table tr:hover {
+  background-color: rgba(255, 45, 149, 0.08);
+}
+
+/* Product Image */
+.table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #3b4cca;
+}
+
+/* Quantity Buttons */
+button.btn-outline-primary {
+  border: 1px solid #3b4cca;
+  color: #3b4cca;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+button.btn-outline-primary:hover {
+  background-color: #3b4cca;
+  color: #fff;
+}
+
+button.btn-outline-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Remove Button */
+button.btn-danger {
+  background-color: transparent;
+  border: 1px solid #ff2d95;
+  color: #ff2d95;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button.btn-danger:hover {
+  background-color: #ff2d95;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Buy Now Button */
+button.btn-success {
+  background-color: #3b4cca;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.btn-success:hover {
+  background-color: #ff2d95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 45, 149, 0.3);
+}
+
+/* Empty Cart */
+.text-center {
+  font-size: 1.2rem;
+  color: #ff2d95;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .table img {
+    width: 45px;
+    height: 45px;
+  }
+
+  button.btn-success {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+/* Shop Page Container */
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f1;
+  background-color: #0f1426;
+  min-height: 100vh;
+}
+
+/* Section Title */
+h2.mb-4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ff2d95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Alerts */
+.alert-info {
+  background-color: #1a1f36;
+  border: 1px solid #3b4cca;
+  color: #d1d6f0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background-color: #2a1a2f;
+  border: 1px solid #ff2d95;
+  color: #ff2d95;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Product Cards */
+.card {
+  background-color: #1a1f36;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(59, 76, 202, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(255, 45, 149, 0.3);
+}
+
+/* Card Image */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #3b4cca;
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3b4cca;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #d1d6f0;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-text strong {
+  color: #ff2d95;
+}
+
+/* Add to Cart Button */
+.btn-primary {
+  background-color: #3b4cca;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff2d95;
+  transform: translateY(-2px);
+}
+/* Apply background to entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f1426;  /* same dark background */
+  color: #f0f0f1;
+}
+
+/* Container stays centered */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Shop Section Title */
+h2.mb-4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ff2d95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+/* Shop Page Container - full width */
+.container {
+  width: 100%;
+  max-width: 100%;  /* always take full width */
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f1;
+  background-color: #0f1426;
+  min-height: 100vh; /* full screen height */
+  box-sizing: border-box;
+}
+
+/* Responsive Product Grid */
+.row {
+  margin: 0;
+}
+
+.col-md-4 {
+  display: flex;
+}
+
+/* Make cards stretch equal height */
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 50%; /* 2 per row on tablets */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    flex: 0 0 100%; /* 1 per row on mobiles */
+    max-width: 100%;
+  }
+}

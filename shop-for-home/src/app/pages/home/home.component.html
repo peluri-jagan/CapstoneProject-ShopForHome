@@ -1,0 +1,85 @@
+<div class="home-container">
+<!-- Hero Section -->
+
+<section class="hero-section">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Welcome to ShopForHome</h1>
+      <p>Stylish home decor & furniture for every room.</p>
+      <div class="hero-buttons">
+        <a [routerLink]="['/shop']" class="btn btn-primary">Shop Now</a>
+<a [routerLink]="['/cart']" class="btn btn-secondary">View Cart</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Featured Products -->
+  <section class="featured-products" *ngIf="!isLoading && featured.length">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="products-grid">
+      <div *ngFor="let product of featured" class="product-card">
+        <div class="product-image">
+          <img [src]="product.imageUrl || 'assets/images/product-placeholder.png'" alt="{{ product.name }}" />
+        </div>
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <strong>{{ product.price | currency:'INR':'symbol':'1.0-0' }}</strong>
+          <a routerLink="/shop" class="btn-card">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="categories-grid">
+      <div class="category-card">Furniture</div>
+      <div class="category-card">Decor</div>
+      <div class="category-card">Electronics</div>
+      <div class="category-card">Kitchen</div>
+    </div>
+  </section>
+
+  <!-- Promotions / Offers -->
+  <section class="promotions">
+    <div class="promo-banner">
+      <h2>Current Offers</h2>
+      <p>Up to <strong>50% off</strong> on selected items! </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"Great quality and fast delivery!"</p>
+        <strong>- Riya S.</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"Loved the product selection and customer service."</p>
+        <strong>- Rajesh K.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Subscribe -->
+  <section class="newsletter">
+    <h2 class="section-title">Subscribe for Updates</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email" />
+      <button class="btn btn-primary">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- Loading / Error -->
+  <div *ngIf="isLoading" class="loading">Loading featured products...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+</div>

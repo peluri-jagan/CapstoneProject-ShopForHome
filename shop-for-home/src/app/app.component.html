@@ -1,0 +1,25 @@
+<nav>
+  <div class="logo">ShopForHome</div>
+  <div class="nav-links">
+    <a routerLink="/" class="btn">Home</a>
+    <a routerLink="/shop" class="btn">Go to Shop</a>
+    <a *ngIf="role === 'User'" routerLink="/cart" class="btn">View Cart</a>
+
+    <!-- Show for guests -->
+    <a *ngIf="!isLoggedIn" routerLink="/login" class="btn">Login</a>
+    <a *ngIf="!isLoggedIn" routerLink="/register" class="btn">Register</a>
+
+    <!-- Show for admin -->
+    <ng-container *ngIf="role === 'Admin'">
+      <a routerLink="/admin/bulk-upload" class="btn">Bulk Upload</a>
+      <a routerLink="/admin/sales-report" class="btn">Sales Report</a>
+      <a routerLink="/admin/manage-products" class="btn">Manage Products</a>
+     
+    </ng-container>
+
+    <!-- Show logout for logged-in users -->
+    <a *ngIf="isLoggedIn" (click)="logout()" class="btn">Logout</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
